@@ -1,0 +1,548 @@
+/* Fonts Link Here */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap");
+
+/* Variable Decliare Here */
+:root {
+    --black: #000;
+    --white: #fff;
+    --danger: #dc3545;
+    --max-container: 80%;
+    --md-container: 90%;
+    --sm-container: 95%;
+}
+
+/* Rest Css default Property   */
+* {
+    font-family: "Montserrat", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Create Custom scrollbar */
+/* width */
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: grey;
+}
+
+/* Header Section Start Here */
+
+header {
+    background: rgba(108, 117, 125, 0.1);
+    padding: 1.6rem 0;
+}
+
+header .header-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: var(--max-container);
+    margin: auto;
+    padding-left: 10rem;
+}
+
+header .header-row span {
+    font-size: 24px;
+}
+
+header .header-row .left {
+    display: flex;
+    align-items: center;
+    gap: 0.8em;
+    border-left: 1px solid rgba(108, 117, 125, 0.1);
+    padding-left: 1rem;
+}
+
+header .header-row .left span:nth-child(2) {
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+header .header-row .right {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+header .header-row .right .attact-icon {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    border-right: 1px solid rgba(108, 117, 125, 0.1);
+    padding-right: 1rem;
+}
+
+header .header-row .right .attact-icon span:nth-child(2) {
+    font-size: 12px;
+    color: rgba(108, 117, 125, 0.3);
+}
+
+header .header-row .right .search-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+header .header-row .right .search-box span i {
+    position: absolute;
+    right: 46%;
+    font-size: 16px;
+    top: 30%;
+}
+
+header .header-row .right input {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    width: 60%;
+    font-size: 16px;
+    padding: 0.5rem 2rem 0.5rem 0.8rem;
+}
+
+header .header-row .right img {
+    width: 24px;
+    padding-bottom: 5px;
+}
+
+/* Header Section End Here */
+
+/* Navbar Section Start Here */
+
+nav {
+    position: sticky;
+    padding: 1rem 0;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    top: 0;
+    background: var(--white);
+}
+
+.nav-row .menu-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+    font-weight: 500;
+    position: relative;
+    margin: 0;
+}
+
+.nav-row .menu-list .drop-down {
+    position: absolute;
+    left: 585px;
+    top: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 11%;
+}
+
+.nav-row .menu-list .drop-down2 {
+    position: absolute;
+    right: 468px;
+    top: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 11%;
+}
+
+.nav-row .menu-list .drop-down .fa-angle-right {
+    display: none;
+    transition: all 0.3s ease;
+}
+
+.nav-row .menu-list .drop-down2 .fa-angle-right {
+    display: none;
+    transition: all 0.3s ease;
+}
+
+.nav-row .menu-list .drop-down a #slow-gap {
+    transition: all 0.3s ease;
+}
+
+.nav-row .menu-list .drop-down2 a #slow-gap {
+    transition: all 0.3s ease;
+}
+
+.nav-row .menu-list .drop-down a:hover #slow-gap {
+    padding-left: 10px;
+}
+
+.nav-row .menu-list .drop-down2 a:hover #slow-gap {
+    padding-left: 10px;
+    display: inline-block;
+}
+
+.nav-row .menu-list .drop-down a:hover .fa-angle-right {
+    display: inline;
+    transition: all 0.3s ease;
+}
+
+.nav-row .menu-list .drop-down2 a:hover .fa-angle-right {
+    display: inline;
+    transition: all 0.3s ease;
+}
+
+.nav-row .menu-list .drop-down {
+    display: none;
+}
+
+.nav-row .menu-list .drop-down2 {
+    display: none;
+}
+
+.nav-row .menu-list li:hover .drop-down {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-row .menu-list li:hover .drop-down2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-row .menu-list .drop-down a,
+.nav-row .menu-list .drop-down2 a,
+.nav-row .menu-list .drop-down3 a {
+    background: var(--white);
+    padding: 9px 20px;
+    border-bottom: 1px solid #eaeaea;
+    font-size: 14px;
+    font-weight: 300;
+}
+.drop-down{
+    height: 80vh !important;
+}
+.drop-down2{
+    height: 80vh !important;
+}
+.drop-down3{
+    height: 80vh !important;
+}
+
+h6 {
+    background-color: #fff;
+    margin: 0;
+    padding: 0 0 20px 18px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.nav-row .menu-list .drop-down a:hover,
+.nav-row .menu-list .drop-down2 a:hover,
+.nav-row .menu-list .drop-down3 a:hover {
+    font-weight: 500;
+}
+
+.nav-row .menu-list .drop-down a:nth-child(1),
+.nav-row .menu-list .drop-down2 a:nth-child(1),
+.nav-row .menu-list .drop-down3 a:nth-child(1) {
+    border-bottom: none;
+    padding-top: 0px;
+}
+
+.nav-row .menu-list .drop-down a:last-child,
+.nav-row .menu-list .drop-down2 a:last-child,
+.nav-row .menu-list .drop-down3 a:last-child {
+    border-bottom: none;
+}
+
+.nav-row .menu-list a {
+    text-decoration: none;
+    color: #000;
+    position: relative;
+}
+
+.nav-row .menu-list a li::after {
+    content: "";
+    width: 0%;
+    height: 1px;
+    display: block;
+    background-color: #000;
+    transition: 0.2s linear;
+}
+
+.nav-row .menu-list li {
+    font-size: 14px;
+}
+
+.nav-row .menu-list a li:hover::after {
+    width: 100%;
+}
+
+.nav-row .menu-list #active-color {
+    color: var(--danger);
+}
+
+.nav-row .menu-list .drop-down3 {
+    height: 65vh;
+    position: absolute;
+    display: flex;
+    opacity: 0;
+    flex-direction: row;
+    justify-content: center;
+    gap: 8rem;
+    width: 100%;
+    right: 0;
+    top: 20px;
+    padding: 4rem 10rem;
+    background-color: #fff;
+    transform: translateY(50px);
+    transition: transform 0.45s linear;
+    box-shadow: 0 3px 3px -3px #0000001a;
+    visibility: hidden;
+    margin: auto;
+}
+
+.nav-row .menu-list .drop-down3 .inner-menu #changes {
+    padding-left: 0px;
+}
+
+.nav-row .menu-list li:hover .drop-down3 {
+    opacity: 1;
+    transform: translateY(0px);
+    visibility: visible;
+}
+
+.nav-row .menu-list .drop-down3 .inner-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-row .menu-list .drop-down3 .inner-menu a {
+    font-size: 12px;
+    border-bottom: none;
+}
+
+.nav-row .menu-list .drop-down3 .inner-menu .set-color {
+    color: red;
+}
+
+.nav-row .menu-list .drop-down3 .inner-menu #setColor {
+    color: red;
+}
+
+.nav-row .menu-list .drop-down3 a #slow-gap {
+    transition: all 0.3s ease;
+}
+
+.nav-row .menu-list .drop-down3 a:hover #slow-gap {
+    padding-left: 10px;
+}
+
+.nav-row .menu-list .drop-down3 .fa-angle-right {
+    display: none;
+    transition: all 0.3s ease;
+}
+
+.nav-row .menu-list .drop-down3 a:hover .fa-angle-right {
+    display: inline;
+    transition: all 0.3s ease;
+}
+
+.nav-row .menu-list .drop-down3 a #slow-gap::after {
+    content: "";
+    width: 0%;
+    height: 1px;
+    display: block;
+    background-color: #000;
+    transition: 0.2s linear;
+}
+
+.nav-row .menu-list a:hover #slow-gap::after {
+    width: 100%;
+}
+
+
+/* slider bottom image */
+
+.flipper-bottom-img{
+
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+    margin: auto;
+}
+
+
+.catagory-section{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 2rem;
+}
+
+.catagory-section img{
+    width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.gift-Voucher-banner img{
+    width: 100%;
+
+}
+
+.bottom-voucher-main{
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+    margin: auto;
+}
+
+
+.card-main{
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    gap: 2rem;
+    text-align: center;
+    padding-bottom: 5rem;
+    
+}
+.card-main p{ font-size: 14px;
+
+}
+
+.card-main h3{
+    font-size: 20px;
+    display: inline-block;
+    padding: 0.5rem 0.7rem;
+    position: relative;
+    top: -15px;
+    background-color: white;
+}
+
+.card-main img{
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.card-main img:hover{
+    transform: scale3d(1.1,1.1,1);
+
+}
+.card-main a{
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+    font-weight: 600;
+    padding-bottom: 2.5rem;
+    display: inline-block;
+}
+
+.banner-img{
+    overflow: hidden;
+    
+}
+
+.banner-text{
+    box-shadow: 0 2px 2px rgba(0,0,0,.07);
+}
+
+.ads-banner{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    padding-bottom: 3rem;
+}
+.ads-banner img{
+    width: 100%;
+}
+
+.ads-banner .sneaker-left,
+ .ads-banner .sneaker-right{
+    width: 50%;
+}
+.ads-banner .sneaker-left a,
+ .ads-banner .sneaker-right a{ 
+    position: relative;
+    display: block;
+}
+
+
+.ads-banner .sneaker-left a::before, 
+.ads-banner .sneaker-left a::after {
+    
+    content: "";
+    display: block;
+    position: absolute;
+    background: rgba(255, 255, 255, .2);
+    width: 0;
+    height: 0;
+    visibility: hidden;
+    transition: all .4s ease-in-out;
+    border: 1px solid rgba(255,255,255,.6);
+ }
+
+ .ads-banner .sneaker-right a::before, 
+.ads-banner .sneaker-right a::after {
+
+    content: "";
+    display: block;
+    position: absolute;
+    background: rgba(255, 255, 255, .2);
+    width: 0;
+    height: 0;
+    visibility: hidden;
+    transition: all .4s ease-in-out;
+    border: 1px solid rgba(255,255,255,.6);
+ }
+
+ .ads-banner .sneaker-left a:hover::before, 
+ .ads-banner .sneaker-left a:hover::after{
+    width: 100%;
+    height: 100%;
+    visibility: visible;
+
+    
+ }
+
+ .ads-banner .sneaker-right a:hover::before, 
+ .ads-banner .sneaker-right a:hover::after{
+    width: 100%;
+    height: 100%;
+    visibility: visible;
+
+    
+ }
+
+
+ .ads-banner .sneaker-left a::before {
+    top: 0;
+    left: 0;
+}
+
+.ads-banner .sneaker-right a::before {
+    top: 0;
+    left: 0;
+}
+
+.ads-banner .sneaker-left a::after {
+    bottom: 0;
+    right: 0;
+}
+
+.ads-banner .sneaker-right a::after {
+    bottom: 0;
+    right: 0;
+}
+
